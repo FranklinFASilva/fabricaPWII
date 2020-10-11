@@ -15,4 +15,15 @@ use App\Http\Controllers\Admin\ChocolateController;
 |
 */
 
-Route::get('/', [ChocolateController::class, 'chocolates']);
+Route::redirect('/', '/admin/chocolates');
+
+Route::prefix('admin')->name('admin.')->group(function(){
+
+Route::get('chocolates', [ChocolateController::class, 'chocolates'])->name('chocolates.listar');
+Route::get('chocolates/adicionar', [ChocolateController::class, 'formAdicionar'])->name('chocolates.form');
+Route::post('chocolates/adicionar', [ChocolateController::class, 'adicionar'])->name('chocolates.adicionar');
+});
+
+Route::get('/sobre', function (){
+    return '<h1>Sobre</h1>';
+});

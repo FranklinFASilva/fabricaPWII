@@ -13,7 +13,8 @@
             <tbody>
                 @forelse ($chocolates as $chocolate)
                     <tr>
-                        <td>{{$chocolate}}</td>
+                        <td>{{$chocolate->nome}}</td>
+                        <td>{{$chocolate->amargor}}</td>
                         <td class="right-align">Exluir - Remover</td>
                     </tr>
 
@@ -25,10 +26,13 @@
 
             </tbody>
         </table>
+
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large waves-effect waves-light" href="{{route('admin.chocolates.form')}}">
+                <i class="large material-icons">add</i>
+            </a>
+        </div>
+
     </section>
 
-@endsection
-
-@section('conteudo-secundario')
-    <p>Texto secundario</p>
 @endsection

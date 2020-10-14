@@ -6,15 +6,16 @@
         <table class="highlight">
             <thead>
                 <tr>
-                    <th>Chocolate</th>
-                    <th class="right-align">Opções</th>
+                    <th>chocolate</th>
+                    <th>amargor</th>
+                    <th class="right-align">opções</th>
                 </tr>
             </thead>
             <tbody>
                 @forelse ($chocolates as $chocolate)
                     <tr>
                         <td>{{$chocolate->nome}}</td>
-                        <td>{{$chocolate->amargor}}</td>
+                        <td>{{$chocolate->amargor}}%</td>
                         <td class="right-align">Exluir - Remover</td>
                     </tr>
 

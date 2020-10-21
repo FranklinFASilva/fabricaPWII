@@ -22,10 +22,10 @@
                 <a href="/" class="brand-logo">Cacau Mania</a>
                 <ul class="right">
                     <li>
-                        <a href="#">Produtos</a>
+                        <a href="route('admin.tipos.index')">Produtos</a>
                     </li>
                     <li>
-                        <a href="#">Chocolates</a>
+                        <a href="route('admin.chocolates.index')">Chocolates</a>
                     </li>
 
                 </ul>
@@ -51,6 +51,11 @@
         @if(session('sucesso'))
             M.toast({html: "{{session('sucesso')}}"});
         @endif
+
+        document.addEventListener('DOMContentLoaded', function(){
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
     </script>
 
 </body>

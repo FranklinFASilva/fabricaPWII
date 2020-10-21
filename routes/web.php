@@ -19,9 +19,8 @@ Route::redirect('/', '/admin/chocolates');
 
 Route::prefix('admin')->name('admin.')->group(function(){
 
-Route::get('chocolates', [ChocolateController::class, 'chocolates'])->name('chocolates.listar');
-Route::get('chocolates/adicionar', [ChocolateController::class, 'formAdicionar'])->name('chocolates.form');
-Route::post('chocolates/adicionar', [ChocolateController::class, 'adicionar'])->name('chocolates.adicionar');
+    Route::resource('chocolates', ChocolateController::class)->except(['show']);
+    Route::resource('tipos', TipoController::class);
 });
 
 Route::get('/sobre', function (){

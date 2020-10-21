@@ -10,5 +10,10 @@ class Chocolate extends Model
     use HasFactory;
 
     // Aqui vai os dados que serão salvos no BD
-    protected $fillable = ['nome', 'amargor'];
+    protected $fillable = ['nome','amargor'];
+
+    public function tipos()
+    {
+        return $this->hasMany(Tipo::class);
+    }
 }

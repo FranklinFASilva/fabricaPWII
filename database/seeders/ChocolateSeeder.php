@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 class ChocolateSeeder extends Seeder
 {
     /**
-     * Run the database see
+     * Run the database seeder
      *
      * @return void
      */
@@ -19,6 +19,6 @@ class ChocolateSeeder extends Seeder
         Tipo::create(['categoria' => 'Gourmet']);
         Tipo::create(['categoria' => 'Importado']);
 
-        
+
     }
 }

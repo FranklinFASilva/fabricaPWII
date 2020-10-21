@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 class ChocolateSeeder extends Seeder
 {
     /**
-     * Run the database seed
+     * Run the database see
      *
      * @return void
      */

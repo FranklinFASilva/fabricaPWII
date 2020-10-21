@@ -18,5 +18,7 @@ class ChocolateSeeder extends Seeder
         Tipo::create(['categoria' => 'Crocante']);
         Tipo::create(['categoria' => 'Gourmet']);
         Tipo::create(['categoria' => 'Importado']);
+
+        
     }
 }
